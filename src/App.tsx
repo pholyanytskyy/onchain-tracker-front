@@ -1,11 +1,13 @@
 import { Field, Form, Formik } from "formik";
 import { useState } from "react";
 import { BiLinkExternal } from "react-icons/bi";
+import Dmany from "./assets/dmany_neg.png";
 import Logo from "./components/Logo";
 import SCConditionCard from "./components/SCConditionCard";
 import TokenHoldingConditionCard from "./components/TokenHoldingConditionCard";
 import TxCountConditionCard from "./components/TxCountConditionCard";
 import { API_BASE } from "./constants";
+
 import {
   ConditionName,
   FormValues,
@@ -191,6 +193,12 @@ function App() {
               >
                 Get accounts
               </button>
+              <div className="divider"></div>
+              <div className="flex items-center justify-center">
+                <a href="https://dmany.io/" target="_blank">
+                  <img src={Dmany} className="w-36" />
+                </a>
+              </div>
             </Form>
           </div>
           <div className="m-0 divider divider-horizontal"></div>
