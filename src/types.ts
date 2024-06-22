@@ -21,6 +21,7 @@ export interface TokenHoldingCondition {
   name: string;
   ercType: "native" | "erc20" | "erc721" | "erc1155";
   address: string;
+  balance: number;
 }
 
 export type Condition = TxCountCondition | SCCondition | TokenHoldingCondition;

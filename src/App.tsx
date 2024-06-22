@@ -2,12 +2,12 @@ import { Field, Form, Formik } from "formik";
 import { useState } from "react";
 import { BiLinkExternal } from "react-icons/bi";
 import Dmany from "./assets/dmany_neg.png";
-import Logo from "./components/Logo";
 import SCConditionCard from "./components/SCConditionCard";
 import TokenHoldingConditionCard from "./components/TokenHoldingConditionCard";
 import TxCountConditionCard from "./components/TxCountConditionCard";
 import { API_BASE } from "./constants";
 
+import Logo from "./components/Logo";
 import {
   ConditionName,
   FormValues,
@@ -50,48 +50,48 @@ function App() {
     <Formik initialValues={initialValues} onSubmit={onFormSubmit}>
       {({ values, setFieldValue, isSubmitting }) => (
         <div className="flex w-full h-screen">
-          <div className="flex flex-col gap-6 p-8 max-w-[500px]">
+          <div className="flex flex-col gap-2 p-4 xl:p-6 max-w-[400px] xl:max-w-[500px]">
             <Logo />
-            <p className="opacity-50 ">
-              abbie is an on-chain activity filter that helps projects select
-              users for airdrops. Set up the required on-chain activities, and
-              abbie will provide a list of users who complete all actions within
-              the specified period.
-            </p>
-            <div className="divider"></div>
-            <Form className="flex flex-col flex-grow gap-6 overflow-hidden">
-              <div className="space-y-6">
-                <p>Period of time</p>
+            <div className="m-0 divider"></div>
+            <Form className="flex flex-col flex-grow gap-4 overflow-hidden xl:gap-6">
+              <div className="space-y-4 xl:space-y-6">
+                <p className="text-sm xl:text-md">Period of time</p>
 
                 <div className="flex gap-6">
-                  <label className="w-full max-w-xs form-control">
+                  <label className="w-full form-control">
                     <div className="label">
-                      <span className="label-text">From:</span>
+                      <span className="text-sm label-text xl:text-md">
+                        From:
+                      </span>
                     </div>
                     <Field
                       name="fromDate"
                       type="text"
                       placeholder="YYYY-MM-DD"
-                      className="w-full max-w-xs input input-bordered"
+                      className="w-full text-sm xl:text-md input input-bordered"
                     />
                   </label>
-                  <label className="w-full max-w-xs form-control">
+                  <label className="w-full form-control">
                     <div className="label">
-                      <span className="label-text">To:</span>
+                      <span className="text-sm label-text xl:text-md">To:</span>
                     </div>
                     <Field
                       name="toDate"
                       type="text"
                       placeholder="YYYY-MM-DD"
-                      className="w-full max-w-xs input input-bordered"
+                      className="w-full text-sm xl:text-md input input-bordered"
                     />
                   </label>
                 </div>
               </div>
               <div className="flex items-center justify-between">
-                <p>Filters</p>
+                <p className="text-sm xl:text-md">Filters</p>
                 <div className="dropdown dropdown-end">
-                  <div tabIndex={0} role="button" className="m-1 btn">
+                  <div
+                    tabIndex={0}
+                    role="button"
+                    className="text-sm btn btn-sm xl:text-md"
+                  >
                     Add filter
                   </div>
                   <ul
@@ -193,17 +193,24 @@ function App() {
               >
                 Get accounts
               </button>
-              <div className="divider"></div>
+              <div className="m-0 divider"></div>
               <div className="flex items-center justify-center">
                 <a href="https://dmany.io/" target="_blank">
-                  <img src={Dmany} className="w-36" />
+                  <img src={Dmany} className="w-24" />
                 </a>
               </div>
             </Form>
           </div>
           <div className="m-0 divider divider-horizontal"></div>
           <div className="w-full overflow-hidden">
-            <p className="px-8 py-4 text-2xl font-bold">Accounts</p>
+            <p className="p-4 text-sm opacity-50 xl:text-md xl:p-6">
+              abbie is an on-chain activity filter that helps projects select
+              users for airdrops. Set up the required on-chain activities, and
+              abbie will provide a list of users who complete all actions within
+              the specified period.
+            </p>
+
+            <p className="px-4 py-4 text-2xl font-bold xl:px-6">Accounts</p>
             {isSubmitting ? (
               <div className="flex items-center justify-center h-full">
                 <span className="loading loading-dots loading-lg"></span>

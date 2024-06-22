@@ -29,6 +29,7 @@ export const createCondition = (name: ConditionName): Condition => {
         name: ConditionName.TOKEN_HOLDING,
         ercType: "native",
         address: "",
+        balance: 0,
       } as TokenHoldingCondition;
   }
 };

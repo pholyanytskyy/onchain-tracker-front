@@ -11,8 +11,8 @@ const TxCountConditionCard = ({
   idx,
 }: TxCountConditionCardProps) => {
   return (
-    <div className="p-6 space-y-4 card bg-neutral text-neutral-content">
-      <h2 className="text-lg card-title">{condition.name}</h2>
+    <div className="p-4 space-y-4 card bg-neutral text-neutral-content">
+      <h2 className="text-sm card-title">{condition.name}</h2>
       <div className="p-0 card-body">
         <label className="w-full max-w-xs form-control">
           <div className="label">
@@ -22,7 +22,7 @@ const TxCountConditionCard = ({
             name={`conditions[${idx}].nonce`}
             type="text"
             placeholder="Type here"
-            className="w-full max-w-xs input input-bordered"
+            className="w-full max-w-xs input input-bordered input-sm xl:input:md"
           />
         </label>
       </div>

@@ -34,7 +34,7 @@ const EventArgs = ({ event, idx }: { event?: Abi; idx: number }) => {
             <Field
               name={`conditions[${idx}].args[${inputIdx}].value`}
               placeholder={input.type}
-              className="w-full input input-bordered"
+              className="w-full input input-bordere input-sm xl:input:md"
             />
           </label>
         );
@@ -49,8 +49,8 @@ const SCConditionCard = ({ condition, idx }: SCConditionCardProps) => {
   const [abi, setAbi] = useState<Abi[]>([]);
 
   return (
-    <div className="p-6 space-y-4 card bg-neutral text-neutral-content">
-      <h2 className="text-lg card-title">{condition.name}</h2>
+    <div className="p-4 space-y-4 card bg-neutral text-neutral-content">
+      <h2 className="text-sm card-title">{condition.name}</h2>
       <div className="p-0 card-body">
         <label className="w-full form-control">
           <div className="label">
@@ -60,11 +60,11 @@ const SCConditionCard = ({ condition, idx }: SCConditionCardProps) => {
             <Field
               type="text"
               placeholder="Address"
-              className="w-full input input-bordered"
+              className="w-full input input-bordered input-sm xl:input:md"
               name={`conditions[${idx}].address`}
             />
             <button
-              className="btn btn-square"
+              className="btn btn-square btn-sm xl:btn-md"
               type="button"
               onClick={async () => {
                 const abi = await fetchAbi(
@@ -88,7 +88,7 @@ const SCConditionCard = ({ condition, idx }: SCConditionCardProps) => {
               </div>
               <Field
                 as="select"
-                className="select select-bordered"
+                className="select select-bordered select-sm xl:select-md"
                 name={`conditions[${idx}].eventName`}
                 onChange={(e: React.ChangeEvent<HTMLSelectElement>) => {
                   const event = events.find(
