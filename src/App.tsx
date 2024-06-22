@@ -71,7 +71,7 @@ function App() {
                     <Field
                       name="fromDate"
                       type="text"
-                      placeholder="Yyyy-mm-dd"
+                      placeholder="YYYY-MM-DD"
                       className="w-full max-w-xs input input-bordered"
                     />
                   </label>
@@ -82,7 +82,7 @@ function App() {
                     <Field
                       name="toDate"
                       type="text"
-                      placeholder="Yyyy-mm-dd"
+                      placeholder="YYYY-MM-DD"
                       className="w-full max-w-xs input input-bordered"
                     />
                   </label>
