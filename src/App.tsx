@@ -33,7 +33,7 @@ function App() {
   };
 
   const onFormSubmit = async (values: FormValues) => {
-    const response = await fetch(`${API_BASE}/condition-receiver`, {
+    const response = await fetch(`${API_BASE}/condition/validate`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
